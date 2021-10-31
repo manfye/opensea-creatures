@@ -1,7 +1,7 @@
 const HDWalletProvider = require("truffle-hdwallet-provider");
 
-const MNEMONIC = process.env.MNEMONIC;
-const NODE_API_KEY = process.env.INFURA_KEY || process.env.ALCHEMY_KEY;
+const MNEMONIC = "name actress lazy shallow theory capital need zoo ocean habit build inquiry";
+const NODE_API_KEY = "p3y7sussolaglrbk";
 const isInfura = !!process.env.INFURA_KEY;
 
 const needsNodeAPI =
