@@ -20,7 +20,7 @@ contract CreatureFactory is FactoryERC721, Ownable {
     address public proxyRegistryAddress;
     address public nftAddress;
     address public lootBoxNftAddress;
-    string public baseURI = "https://creatures-api.opensea.io/api/factory/";
+    string public baseURI = "https://nftsea.herokuapp.com/api/creature/";
 
     /*
      * Enforce the existence of only 100 OpenSea creatures.
@@ -47,11 +47,11 @@ contract CreatureFactory is FactoryERC721, Ownable {
     }
 
     function name() override external pure returns (string memory) {
-        return "OpenSeaCreature Item Sale";
+        return "Dinorappy";
     }
 
     function symbol() override external pure returns (string memory) {
-        return "CPF";
+        return "Dino";
     }
 
     function supportsFactoryInterface() override public pure returns (bool) {
