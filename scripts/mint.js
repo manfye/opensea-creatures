@@ -1,5 +1,6 @@
 const HDWalletProvider = require("truffle-hdwallet-provider");
 const dotenv = require('dotenv');
+dotenv.config();
 
 const web3 = require("web3");
 const MNEMONIC = process.env.MNEMONIC;
@@ -78,6 +79,8 @@ async function main() {
       { gasLimit: "1000000" }
     );
 
+    console.log(factoryContract)
+
     // Creatures issued directly to the owner.
     for (var i = 0; i < NUM_CREATURES; i++) {
       const result = await factoryContract.methods
@@ -102,6 +105,7 @@ async function main() {
 
     // Creatures issued directly to the owner.
     for (var i = 0; i < NUM_CREATURES; i++) {
+
       const result = await nftContract.methods
         .mintTo(OWNER_ADDRESS)
         .send({ from: OWNER_ADDRESS });
