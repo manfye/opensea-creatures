@@ -1,4 +1,6 @@
 const HDWalletProvider = require("truffle-hdwallet-provider");
+const dotenv = require('dotenv');
+
 const web3 = require("web3");
 const MNEMONIC = process.env.MNEMONIC;
 const NODE_API_KEY = process.env.INFURA_KEY || process.env.ALCHEMY_KEY;
@@ -16,6 +18,7 @@ if (!MNEMONIC || !NODE_API_KEY || !OWNER_ADDRESS || !NETWORK) {
   console.error(
     "Please set a mnemonic, Alchemy/Infura key, owner, network, and contract address."
   );
+  console.log(process.env.INFURA_KEY)
   return;
 }
 
